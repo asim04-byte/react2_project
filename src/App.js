@@ -11,9 +11,6 @@ import Womens from './e-cart/womens/womens.jsx'
 function App() {
   
   const isAuthenticated = true; 
-  const handleSignInSuccess = () => {
-    console.log("User signed in successfully");
-  };
 
   return (
     <div className="App">
@@ -21,7 +18,7 @@ function App() {
         <Routes>
           <Route path="sign_up" element={<Signups />} />
           <Route path="/latest" element={<LatestItems />} />
-          <Route path="/" element={< Signins handleSignInSuccess={handleSignInSuccess} />} />
+          <Route path="/" element={< Signins/>} />
           <Route path="/navbar" element={<NavbarComponent isAuthenticated={isAuthenticated} />}/>
           <Route path="/men" element={<Men/>}/>
           <Route path="/kids" element={<Kid/>}/>
